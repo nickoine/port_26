@@ -2,21 +2,30 @@
 import React, { useEffect, useState } from "react";
 import { DiMongodb, DiNginx, DiNpm, DiPostgresql, DiVim } from "react-icons/di";
 import {
-  FaAws,
-  FaCss3,
-  FaDocker,
-  FaEnvelope,
-  FaGit,
-  FaGithub,
-  FaHtml5,
-  FaLinkedin,
-  FaLinux,
-  FaNodeJs,
-  FaPhone,
-  FaReact,
-  FaVuejs,
-  FaYarn,
-} from "react-icons/fa6";
+  SiPython,
+  SiOpenai,
+  SiDjango,
+  SiDocker,
+  SiLinux,
+  SiGit,
+  SiGrafana,
+  SiOllama,
+  SiPytest,
+  SiPrometheus,
+  SiPostman,
+  SiRedis,
+  SiPostgresql,
+  SiSwagger,
+  SiMongodb,
+  SiAnsible,
+  SiAnthropic,
+  SiKotlin,
+  SiAppium,
+
+} from "react-icons/si";
+import {
+  FaEnvelope, FaLinkedin, FaGithub
+} from "react-icons/fa"
 import { RiFirebaseFill, RiTailwindCssFill } from "react-icons/ri";
 import {
   SiExpress,
@@ -38,57 +47,43 @@ import { config } from "@/data/config";
 const CONTACT_LINKS = [
   {
     name: "Email",
-    content: "faiq.khokhar06@gmail.com",
-    href: "mailto:faiq.khokhar06@gmail.com",
+    content: "nickkyyr@gmail.com",
+    href: "mailto:nickkyyr@gmail.com",
     icon: <FaEnvelope />,
   },
   {
-    name: "Phone",
-    content: "+923249419774",
-    href: "https://wa.me/923249419774",
-    icon: <FaPhone />,
-  },
-  {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/m-faiq-khokhar/",
-    content: "/m-faiq-khokhar",
+    href: "https://www.linkedin.com/in/nikk-the-brick/",
+    content: "/nikk-the-brick",
     icon: <FaLinkedin />,
   },
   {
     name: "GitHub",
-    href: "https://github.com/Faiq-Khokhar",
-    content: "/Faiq-Khokhar",
+    href: "https://github.com/nickoine",
+    content: "/nickoine",
     icon: <FaGithub />,
   },
 ];
 
 const TOOLS = [
-  { name: "JavaScript", content: "High-level language I bend to my will.", icon: <SiJavascript size={50} color="#f0db4f" /> },
-  { name: "TypeScript", content: "Safety net for large builds.", icon: <SiTypescript size={50} color="#007acc" /> },
-  { name: "HTML", content: "Semantic foundations first.", icon: <FaHtml5 size={50} color="#e34c26" /> },
-  { name: "CSS", content: "Layouts without the tears.", icon: <FaCss3 size={50} color="#563d7c" /> },
-  { name: "Nodejs", content: "APIs and tooling backbone.", icon: <FaNodeJs size={50} color="#6cc24a" /> },
-  { name: "React.js", content: "Componentized everything.", icon: <FaReact size={50} color="#61dafb" /> },
-  { name: "Docker", content: "Parity across machines.", icon: <FaDocker size={50} color="#2496ed" /> },
-  { name: "NginX", content: "Lean edge routing.", icon: <DiNginx size={50} color="#008000" /> },
-  { name: "Vue.js", content: "When the job fits Vue.", icon: <FaVuejs size={50} color="#41b883" /> },
-  { name: "Express.js", content: "Minimal APIs in minutes.", icon: <SiExpress size={50} color="#fff" /> },
-  { name: "PostgreSQL", content: "Relational workhorse.", icon: <DiPostgresql size={50} color="#336791" /> },
-  { name: "MongoDB", content: "Documents when flexible schema wins.", icon: <DiMongodb size={50} color="#4db33d" /> },
-  { name: "Tailwind CSS", content: "Utility-first speed.", icon: <RiTailwindCssFill size={50} color="#06b6d4" /> },
-  { name: "Firebase", content: "Fast prototypes with auth + data.", icon: <RiFirebaseFill size={50} color="#FFCA28" /> },
-  { name: "Git", content: "History without regrets.", icon: <FaGit size={50} color="#f05032" /> },
-  { name: "GitHub", content: "Home base for collab.", icon: <FaGithub size={50} color="#fff" /> },
-  { name: "VS Code", content: "Everyday editor muscle memory.", icon: <SiVscodium size={50} color="#007acc" /> },
-  { name: "VIM", content: "When modal editing is faster.", icon: <DiVim size={50} color="#fff" /> },
-  { name: "Prettier", content: "Keep the bikeshedding away.", icon: <SiPrettier size={50} color="#f7b93c" /> },
-  { name: "NPM", content: "Packages all day.", icon: <DiNpm size={50} color="#CB3837" /> },
-  { name: "Yarn", content: "Lockfile serenity.", icon: <FaYarn size={50} color="#2C8EBB" /> },
-  { name: "Vercel", content: "Ship frontends fast.", icon: <SiVercel size={50} color="#fff" /> },
-  { name: "Linux", content: "Stable dev base.", icon: <FaLinux size={50} color="#fff" /> },
-  { name: "Kubuntu", content: "Clean KDE workflows.", icon: <SiKubuntu size={50} color="#0077C4" /> },
-  { name: "Terminal", content: "CLI first mindset.", icon: <TbTerminal2 size={50} color="#fff" /> },
-  { name: "AWS", content: "Infra that scales.", icon: <FaAws size={50} color="#3f51b5" /> },
+  { name: "Python", content: "Backend development.", icon: <SiPython size={50} color="#3776ab" /> },
+  { name: "OpenAI", content: "LLM integration.", icon: <SiOpenai size={50} color="#ffffff" /> },
+  { name: "Django", content: "Structured backend.", icon: <SiDjango size={50} color="#092e20" /> },
+  { name: "Docker", content: "Containerized development.", icon: <SiDocker size={50} color="#2496ed" /> },
+  { name: "Linux", content: "Stable development base.", icon: <SiLinux size={50} color="#ffffff" /> },
+  { name: "Git", content: "Version control.", icon: <SiGit size={50} color="#f05032" /> },
+  { name: "Grafana", content: "Monitoring and metrics.", icon: <SiGrafana size={50} color="#f46800" /> },
+  { name: "Ollama", content: "Local LLM model serving.", icon: <SiOllama size={50} color="#ffffff" /> },
+  { name: "Pytest", content: "Python test fixtures.", icon: <SiPytest size={50} color="#0a9edc" /> },
+  { name: "Prometheus", content: "Metrics collection.", icon: <SiPrometheus size={50} color="#e6522c" /> },
+  { name: "Postman", content: "API testing.", icon: <SiPostman size={50} color="#ff6c37" /> },
+  { name: "Redis", content: "Caching, queues.", icon: <SiRedis size={50} color="#dc382d" /> },
+  { name: "PostgreSQL", content: "Relational data modeling.", icon: <SiPostgresql size={50} color="#336791" /> },
+  { name: "Swagger", content: "API documentation, OpenAPI.", icon: <SiSwagger size={50} color="#85ea2d" /> },
+  { name: "MongoDB", content: "Document storage, flexible design.", icon: <SiMongodb size={50} color="#47a248" /> },
+  { name: "AsyncIO", content: "Python workflows logic.", icon: <SiPython size={50} color="#3776ab" /> },
+  { name: "Ansible", content: "Infrastructure automation.", icon: <SiAnsible size={50} color="#ee0000" /> },
+  { name: "Kotlin", content: "Android mobile plugins.", icon: <SiKotlin size={50} color="#7f52ff" /> },
 ];
 
 function Page() {
@@ -136,9 +131,9 @@ function Page() {
                 />
               </div>
               <div className="flex flex-col gap-2 items-center text-center sm:items-start sm:text-left xl:items-center xl:text-center">
-                <p className="text-lg sm:text-xl md:text-2xl">M. Faiq Khokhar</p>
+                <p className="text-lg sm:text-xl md:text-2xl">Nick M.K.</p>
                 <div className="text-[11px] sm:text-xs bg-zinc-700 w-fit px-3 py-1 rounded-full">
-                  Sr. Full Stack Engineer
+                  Python Developer ➡️ Delivery Manager
                 </div>
               </div>
             </div>
@@ -173,10 +168,15 @@ function Page() {
             <div className="space-y-4 sm:space-y-6">
               <h1 className="text-2xl sm:text-3xl lg:text-4xl">About me</h1>
               <p className="leading-relaxed text-sm sm:text-base text-zinc-200">
-                Hey there! I&apos;m Faiq K., a Fullstack developer passionate about creating meaningful digital experiences. With great in Web development, I thrive on turning ideas into reality through coding and design. My journey began with a fascination for technology and a drive to make a positive impact.
+                Hey there! I&apos;m Nick, a Software Engineer and creative technologist focused on digital products. I care about building practical systems that move from testing to development to deployment, automation, and real delivery.
               </p>
+
               <p className="leading-relaxed text-sm sm:text-base text-zinc-200">
-                When I&apos;m not coding, you can find me playing games, cricket, football, exploring new technologies, or sipping coffee while brainstorming my next project.
+                My recent focus is backend and infrastructure work around AI/LLM systems. I focus on deployment, AI/LLM integrations, DevOps-oriented workflows, and CI/CD, where engineering is connected not only to writing code, but also to shipping products faster and more reliably today. 
+              </p>
+
+              <p className="leading-relaxed text-sm sm:text-base text-zinc-200">
+                When I&apos;m not coding, you can find me playing music, football, exploring new technologies, or sipping coffee while brainstorming my next project.
               </p>
             </div>
 

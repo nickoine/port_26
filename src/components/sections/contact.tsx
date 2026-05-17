@@ -17,7 +17,7 @@ const ContactSection = () => {
     <SectionWrapper id="contact" className="min-h-[100dvh] max-w-7xl mx-auto ">
       <SectionHeader id='contact' className="relative mb-14" title={
         <>
-          LET&apos;S WORK <br />
+          LET&apos;S CREATE <br />
           TOGETHER
         </>} />
       <div className="grid grid-cols-1 md:grid-cols-2 z-[9999] mx-4">
@@ -25,7 +25,7 @@ const ContactSection = () => {
           <CardHeader>
             <CardTitle className="text-4xl">Contact Form</CardTitle>
             <CardDescription>
-              Please contact me directly at{" "}
+              Please contact my AI assistant at{" "}
               <a
                 target="_blank"
                 href={`mailto:${config.email}`}

@@ -65,7 +65,6 @@ const HeroSection = () => {
                       side="top"
                       className="dark:bg-white dark:text-black"
                     >
-                      theres something waiting for you in devtools
                     </TooltipContent>
                   </Tooltip>
                 </BlurIn>
@@ -76,14 +75,22 @@ const HeroSection = () => {
                       "cursor-default font-display sm:text-xl md:text-xl whitespace-nowrap bg-clip-text "
                     )}
                   >
-                    A Full Stack Web Developer
+                    Software Developer. 
+                  </p>
+                  <p
+                    className={cn(
+                      "md:self-start mt-2 font-thin text-md text-slate-500 dark:text-zinc-400",
+                      "cursor-default font-display sm:text-xl md:text-xl whitespace-nowrap bg-clip-text "
+                    )}
+                  >
+                    Backend & Automation.
                   </p>
                 </BlurIn>
               </div>
               <div className="mt-6 flex flex-col gap-3 w-fit">
                 <Link
                   href={
-                    "https://drive.google.com/file/d/184CT9elgsqE8nYGlfE0frH-N76Vsg3Yy/view?usp=sharing"
+                    "https://drive.google.com/file/d/1infxTTGNXGjhIEE7cxiicaWrj9HRPry_/view?usp=sharing"
                   }
                   target="_blank"
                   className="flex-1"
@@ -91,7 +98,21 @@ const HeroSection = () => {
                   <BoxReveal delay={2} width="100%">
                     <Button className="flex items-center gap-2 w-full">
                       <File size={24} />
-                      <p>Resume</p>
+                      <p>CV 🇩🇪</p>
+                    </Button>
+                  </BoxReveal>
+                </Link>
+                <Link
+                  href={
+                    "https://drive.google.com/file/d/1-Vx6_3cJ7LH8t9m_MRn5ZuAi4STd6EZJ/view?usp=sharing"
+                  }
+                  target="_blank"
+                  className="flex-1"
+                >
+                  <BoxReveal delay={2} width="100%">
+                    <Button className="flex items-center gap-2 w-full">
+                      <File size={24} />
+                      <p>CV 🇺🇸</p>
                     </Button>
                   </BoxReveal>
                 </Link>
@@ -103,12 +124,12 @@ const HeroSection = () => {
                           variant={"outline"}
                           className="block w-full overflow-hidden"
                         >
-                          Hire Me
+                        email me ✉️
                         </Button>
                       </Link>
                     </TooltipTrigger>
                     <TooltipContent side="bottom">
-                      <p>Yes, you can do it. 🥹 🙏</p>
+                      <p>Yes, email works.</p>
                     </TooltipContent>
                   </Tooltip>
                   <div className="flex items-center h-full gap-2">

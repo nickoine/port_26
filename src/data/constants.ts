@@ -1,30 +1,41 @@
-// thoda zada ts ho gya idhar
 export enum SkillNames {
-  JS = "js",
-  TS = "ts",
-  HTML = "html",
-  CSS = "css",
-  REACT = "react",
-  VUE = "vue",
-  NEXTJS = "nextjs",
-  TAILWIND = "tailwind",
-  NODEJS = "nodejs",
-  EXPRESS = "express",
-  POSTGRES = "postgres",
-  MONGODB = "mongodb",
-  GIT = "git",
-  GITHUB = "github",
-  PRETTIER = "prettier",
-  NPM = "npm",
-  FIREBASE = "firebase",
-  WORDPRESS = "wordpress",
-  LINUX = "linux",
+  PYTHON = "python",
+  FLASK = "flask",
+  DJANGO = "django",
+  FASTAPI = "fastapi",
+  DRF = "django-rest-framework",
+  ASYNCIO = "asyncio",
+
+  OPENAI = "openai",
+  OPENROUTER = "openrouter",
+  OLLAMA = "ollama",
+  MCP = "mcp",
+  HUGGINGFACE = "huggingface",
+
   DOCKER = "docker",
+  LINUX = "linux",
   NGINX = "nginx",
-  AWS = "aws",
-  VIM = "vim",
-  VERCEL = "vercel",
+  ANSIBLE = "ansible",
+  JENKINS = "jenkins",
+  GRAFANA = "grafana",
+
+  POSTGRESQL = "postgresql",
+  MONGODB = "mongodb",
+  REDIS = "redis",
+
+  PYTEST = "pytest",
+  SELENIUM = "selenium",
+  POSTMAN = "postman",
+  SWAGGER = "swagger",
+
+  GITHUB = "github",
+  BASH = "bash",
+
+  KOTLIN = "kotlin",
+  APPIUM = "appium",
+  OSI = "osi"
 }
+
 export type Skill = {
   id: number;
   name: string;
@@ -33,204 +44,267 @@ export type Skill = {
   color: string;
   icon: string;
 };
+
 export const SKILLS: Record<SkillNames, Skill> = {
-  [SkillNames.JS]: {
+  [SkillNames.PYTHON]: {
     id: 1,
-    name: "js",
-    label: "JavaScript",
-    shortDescription: "sprinkling chaos and callbacks since '95 🌀🚀",
-    color: "#f0db4f",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    name: "python",
+    label: "Python",
+    shortDescription: "Backend development, automation, scripting, and AI system integration.",
+    color: "#3776ab",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
   },
-  [SkillNames.TS]: {
+
+  [SkillNames.FLASK]: {
     id: 2,
-    name: "ts",
-    label: "TypeScript",
-    shortDescription:
-      "JavaScript’s overachiever with a helmet on 🪖🔒",
-    color: "#007acc",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    name: "flask",
+    label: "Flask",
+    shortDescription: "Lightweight backend services, internal tools, prototypes, and APIs.",
+    color: "#ffffff",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg",
   },
-  [SkillNames.HTML]: {
+
+  [SkillNames.DJANGO]: {
     id: 3,
-    name: "html",
-    label: "HTML",
-    shortDescription: "the internet’s grandparent still handing out tags 📜🔥",
-    color: "#e34c26",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    name: "django",
+    label: "Django",
+    shortDescription: "Structured backend applications, admin systems, and production web services.",
+    color: "#092e20",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
   },
-  [SkillNames.CSS]: {
+
+  [SkillNames.FASTAPI]: {
     id: 4,
-    name: "css",
-    label: "CSS",
-    shortDescription: "fashion week for divs, with unexpected plot twists 🧵✨",
-    color: "#563d7c",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    name: "fastapi",
+    label: "FastAPI",
+    shortDescription: "Modern API development with typed contracts, validation, and service architecture.",
+    color: "#009688",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
   },
-  [SkillNames.REACT]: {
+
+  [SkillNames.DRF]: {
     id: 5,
-    name: "react",
-    label: "React",
-    shortDescription: "hooks on hooks on hooks—state of constant suspense 🎣⚛️",
-    color: "#61dafb",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    name: "django-rest-framework",
+    label: "Django REST Framework",
+    shortDescription: "REST API development on top of Django with serializers, views, and permissions.",
+    color: "#a30000",
+    icon: "https://cdn.simpleicons.org/django/092E20",
   },
-  [SkillNames.VUE]: {
+
+  [SkillNames.GRAFANA]: {
     id: 6,
-    name: "vue",
-    label: "Vue",
-    shortDescription:
-      "frontend zen garden with reactive bonsai vibes 🟢😌",
-    color: "#41b883",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+    name: "grafana",
+    label: "Grafana",
+    shortDescription: "Monitoring dashboards and metrics visualization, because guessing production health is not a strategy.",
+    color: "#f46800",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg",
   },
-  [SkillNames.NEXTJS]: {
+
+  [SkillNames.OPENAI]: {
     id: 7,
-    name: "nextjs",
-    label: "Next.js",
-    shortDescription:
-      "SSR sorcery with a sprinkle of router drama 👑🪄",
-    color: "#fff",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+    name: "openai",
+    label: "OpenAI SDK",
+    shortDescription: "LLM integration, structured outputs, tool calling, and AI workflow automation.",
+    color: "#ffffff",
+    icon: "https://cdn.simpleicons.org/openai/ffffff",
   },
-  [SkillNames.TAILWIND]: {
+
+  [SkillNames.OPENROUTER]: {
     id: 8,
-    name: "tailwind",
-    label: "Tailwind",
-    shortDescription: "utility drip so strong it bends time-to-ship ⏩🌪️",
-    color: "#38bdf8",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+    name: "openrouter",
+    label: "OpenRouter",
+    shortDescription: "Model routing across different LLM providers through a unified API layer.",
+    color: "#ffffff",
+    icon: "https://cdn.simpleicons.org/openrouter/ffffff",
   },
-  [SkillNames.NODEJS]: {
+
+  [SkillNames.OLLAMA]: {
     id: 9,
-    name: "nodejs",
-    label: "Node.js",
-    shortDescription: "JavaScript’s backend cosplay, event loop edition 🔄🟢",
-    color: "#6cc24a",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    name: "ollama",
+    label: "Ollama",
+    shortDescription: "Local and remote open-source model runtime for practical LLM experiments.",
+    color: "#ffffff",
+    icon: "https://cdn.simpleicons.org/ollama/ffffff",
   },
-  [SkillNames.EXPRESS]: {
+
+  [SkillNames.HUGGINGFACE]: {
     id: 10,
-    name: "express",
-    label: "Express",
-    shortDescription: "middlewares on a diet—minimal, spicy, fast 🛤️💨",
-    color: "#fff",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    name: "huggingface",
+    label: "Hugging Face",
+    shortDescription: "Open model ecosystem for LLMs, datasets, benchmarks, and AI tooling.",
+    color: "#ffcc4d",
+    icon: "https://cdn.simpleicons.org/huggingface/FFD21E",
   },
-  [SkillNames.POSTGRES]: {
-    id: 11,
-    name: "postgres",
-    label: "PostgreSQL",
-    shortDescription: "relational powerhouse with elephant memory 🐘💾",
-    color: "#336791",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-  },
-  [SkillNames.MONGODB]: {
-    id: 12,
-    name: "mongodb",
-    label: "MongoDB",
-    shortDescription: "document hoarder with flexible vibes 🗂️🍃",
-    color: "#336791",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-  },
-  [SkillNames.GIT]: {
-    id: 13,
-    name: "git",
-    label: "Git",
-    shortDescription: "time travel for code, with merge plot twists ⏳🌀",
-    color: "#f1502f",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-  },
-  [SkillNames.GITHUB]: {
-    id: 14,
-    name: "github",
-    label: "GitHub",
-    shortDescription: "PR central where branches learn to play nice 🐙🤝",
-    color: "#000000",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-  },
-  [SkillNames.PRETTIER]: {
-    id: 15,
-    name: "prettier",
-    label: "Prettier",
-    shortDescription: "auto-format fairy that hushes lint fights 🧹✨",
-    color: "#f7b93a",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prettier/prettier-original.svg",
-  },
-  [SkillNames.NPM]: {
-    id: 16,
-    name: "npm",
-    label: "NPM",
-    shortDescription: "the OG package plug—mind the dependency maze 📦🧭",
-    color: "#fff",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg",
-  },
-  [SkillNames.FIREBASE]: {
-    id: 17,
-    name: "firebase",
-    label: "Firebase",
-    shortDescription:
-      "rapid backend-in-a-box; watch for the vendor vines 🔥🎒",
-    color: "#ffca28",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
-  },
-  [SkillNames.WORDPRESS]: {
-    id: 18,
-    name: "wordpress",
-    label: "WordPress",
-    shortDescription: "CMS elder with a million plugins and opinions 🧓🔌",
-    color: "#007acc",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg",
-  },
-  [SkillNames.LINUX]: {
-    id: 19,
-    name: "linux",
-    label: "Linux",
-    shortDescription: "kernel kingdom for terminal goblins 🧙‍♂️🐧",
-    color: "#fff",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
-  },
+
   [SkillNames.DOCKER]: {
-    id: 20,
+    id: 11,
     name: "docker",
     label: "Docker",
-    shortDescription: "container Tetris that actually stacks right 🐳📦",
+    shortDescription: "Containerized development environments, service packaging, and deployment workflows.",
     color: "#2496ed",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
   },
+
+  [SkillNames.LINUX]: {
+    id: 12,
+    name: "linux",
+    label: "Linux",
+    shortDescription: "Server-side development, system operations, shell workflows, and debugging.",
+    color: "#ffffff",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
+  },
+
   [SkillNames.NGINX]: {
-    id: 21,
+    id: 13,
     name: "nginx",
-    label: "NginX",
-    shortDescription: "reverse proxy sprinter with cache-for-days 🏎️🌀",
-    color: "#008000",
+    label: "Nginx",
+    shortDescription: "Reverse proxy configuration, routing, static serving, and backend exposure.",
+    color: "#009639",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg",
   },
-  [SkillNames.AWS]: {
+
+  [SkillNames.ANSIBLE]: {
+    id: 14,
+    name: "ansible",
+    label: "Ansible",
+    shortDescription: "Infrastructure automation, repeatable server setup, and configuration management.",
+    color: "#ee0000",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg",
+  },
+
+  [SkillNames.JENKINS]: {
+    id: 15,
+    name: "jenkins",
+    label: "Jenkins",
+    shortDescription: "CI/CD pipelines, automated builds, test execution, and delivery workflows.",
+    color: "#d24939",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg",
+  },
+
+  [SkillNames.POSTGRESQL]: {
+    id: 16,
+    name: "postgresql",
+    label: "PostgreSQL",
+    shortDescription: "Relational database design, SQL, persistence layers, and backend data modeling.",
+    color: "#336791",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+  },
+
+  [SkillNames.MONGODB]: {
+    id: 17,
+    name: "mongodb",
+    label: "MongoDB",
+    shortDescription: "Document database usage for flexible data models and application storage.",
+    color: "#47a248",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+  },
+
+  [SkillNames.REDIS]: {
+    id: 18,
+    name: "redis",
+    label: "Redis",
+    shortDescription: "Caching, queues, temporary state, and fast in-memory data access.",
+    color: "#dc382d",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
+  },
+
+  [SkillNames.PYTEST]: {
+    id: 19,
+    name: "pytest",
+    label: "Pytest",
+    shortDescription: "Python testing, fixtures, test suites, and automated quality checks.",
+    color: "#0a9edc",
+    icon: "https://cdn.simpleicons.org/pytest/0A9EDC",
+  },
+
+  [SkillNames.SELENIUM]: {
+    id: 20,
+    name: "selenium",
+    label: "Selenium",
+    shortDescription: "Browser automation, UI testing, regression checks, and test workflows.",
+    color: "#43b02a",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg",
+  },
+
+  [SkillNames.POSTMAN]: {
+    id: 21,
+    name: "postman",
+    label: "Postman",
+    shortDescription: "API testing, request collections, debugging, and backend contract validation.",
+    color: "#ff6c37",
+    icon: "https://cdn.simpleicons.org/postman/FF6C37",
+  },
+
+  [SkillNames.SWAGGER]: {
     id: 22,
-    name: "aws",
-    label: "AWS",
-    shortDescription:
-      "cloud buffet—powerful, but don’t lose your plate 🌐⚡",
-    color: "#ff9900",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original.svg",
+    name: "swagger",
+    label: "Swagger",
+    shortDescription: "API documentation, OpenAPI contracts, and service interface specification.",
+    color: "#85ea2d",
+    icon: "https://cdn.simpleicons.org/swagger/85EA2D",
   },
-  [SkillNames.VIM]: {
+
+  [SkillNames.GITHUB]: {
     id: 23,
-    name: "vim",
-    label: "Vim",
-    shortDescription: "modal wizardry; escape key sold separately 🧙‍♂️🚪",
-    color: "#e34c26",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vim/vim-original.svg",
+    name: "github",
+    label: "GitHub",
+    shortDescription: "Repository management, pull requests, code collaboration, and project delivery.",
+    color: "#ffffff",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
   },
-  [SkillNames.VERCEL]: {
+
+  [SkillNames.BASH]: {
     id: 24,
-    name: "vercel",
-    label: "Vercel",
-    shortDescription:
-      "deploy, hydrate, touch grass—the triangle’s got you 🚀🌿",
-    color: "#6cc24a",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg",
+    name: "bash",
+    label: "Bash",
+    shortDescription: "Shell scripting, automation, system workflows, and Linux command-line operations.",
+    color: "#4eaa25",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg",
+  },
+
+  [SkillNames.MCP]: {
+    id: 25,
+    name: "mcp",
+    label: "Model Context Protocol",
+    shortDescription: "Connected AI systems to tools and external context so agents could stop pretending they know everything.",
+    color: "#ffffff",
+    icon: "https://cdn.simpleicons.org/openai/ffffff",
+  },
+
+  [SkillNames.KOTLIN]: {
+    id: 26,
+    name: "kotlin",
+    label: "Kotlin",
+    shortDescription: "Android-side development and automation support when Python alone could not bully the device enough.",
+    color: "#7f52ff",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
+  },
+
+  [SkillNames.APPIUM]: {
+    id: 27,
+    name: "appium",
+    label: "Appium",
+    shortDescription: "Mobile E2E automation against Android devices, because tapping screens manually is not a career plan.",
+    color: "#662d91",
+    icon: "https://cdn.simpleicons.org/appium/662D91",
+  },
+
+  [SkillNames.ASYNCIO]: {
+    id: 28,
+    name: "asyncio",
+    label: "asyncio",
+    shortDescription: "Asynchronous Python workflows for I/O-heavy logic, because waiting politely is not always architecture.",
+    color: "#3776ab",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  },
+
+  [SkillNames.OSI]: {
+  id: 29,
+  name: "osi",
+  label: "OSI Model",
+  shortDescription: "Network layer abstraction for understanding why packets disappear exactly when confidence appears.",
+  color: "#4eaa25",
+  icon: "https://cdn.simpleicons.org/cisco/1BA0D7",
   },
 };
 
@@ -247,77 +321,139 @@ export type Experience = {
 export const EXPERIENCE: Experience[] = [
   {
     id: 1,
-    startDate: "Jun 2023",
-    endDate: "Present",
-    title: "Sr. MERN Stack Developer",
-    company: "Code Encoders",
+    startDate: "01/2026",
+    endDate: "06/2026",
+    title: "Backend Developer. AI Automation.",
+    company: "TR client, Freelance, IT Consulting",
     description: [
-      "Leveled up from Associate to Senior while shipping 45+ full-stack builds without burning the servers down.",
-      "Dragged legacy Node into the Nest.js era and kept Swagger honest so nobody ships mystery endpoints.",
-      "Split bundles, lazy-loaded everything, tightened APIs, sprinkled Jest, and let GitHub Actions babysit deployments.",
+      "Leveled up in LLM/AI area. Prompt, context, agent engineering 🤖",
+      "Designed cloud-to-local model routing pipelines and kept token chaos under control 🚦",
+      "Also acted as a project manager when coordination needed fewer meetings and more signal 📞"
     ],
     skills: [
-      SkillNames.REACT,
-      SkillNames.NODEJS,
-      SkillNames.EXPRESS,
-      SkillNames.MONGODB,
-      SkillNames.TAILWIND,
+      SkillNames.PYTHON,
+      SkillNames.LINUX,
+      SkillNames.OPENAI,
+      SkillNames.DOCKER,
+      SkillNames.OLLAMA,
+      SkillNames.MCP,
+      SkillNames.OPENROUTER,
     ],
   },
   {
     id: 2,
-    startDate: "May 2024",
-    endDate: "Dec 2024",
-    title: "Sr. Web Developer",
-    company: "Pixle Digital",
+    startDate: "01/2024",
+    endDate: "01/2025",
+    title: "Web Backend Developer",
+    company: "SeeWay, Product, Fintech",
     description: [
-      "Steered remote squads and set the coding rules so client apps didn’t devolve into spaghetti.",
-      "Rolled out reusable kits and boilerplates that bumped accuracy and shaved delivery time like a speedrun.",
+      "Refactored and maintained existing Django services, keeping backend logic maintainable.",
+      "Built new product features, REST APIs, validation flows, and cross-device ID verification.",
+      "Optimized database queries, fixed bugs, documented APIs, and worked closely with QA to ship features with fewer surprises in production.",
       "Mentored devs, tuned workflows, and watched team productivity glow up without extra coffee.",
     ],
     skills: [
-      SkillNames.REACT,
-      SkillNames.TS,
-      SkillNames.TAILWIND,
-      SkillNames.NODEJS,
-      SkillNames.GIT,
+      SkillNames.PYTHON,
+      SkillNames.DJANGO,
+      SkillNames.DOCKER,
+      SkillNames.POSTGRESQL,
+      SkillNames.REDIS,
+      SkillNames.DRF,
+      SkillNames.SWAGGER
     ],
   },
   {
     id: 3,
-    startDate: "Sep 2022",
-    endDate: "Mar 2023",
-    title: "Front-End Developer",
-    company: "ZikraInfoTech",
+    startDate: "06/2023",
+    endDate: "01/2024",
+    title: "DevOps, Automation",
+    company: "FineLabs, Product, Web3 Consulting",
     description: [
-      "Built inclusive, multilingual UIs and rapid Firebase prototypes so everyone could click happily.",
-      "Ran perf audits, bumped Lighthouse by ~20%, and kept layouts responsive on every weird viewport.",
-      "Pushed accessibility basics so launches worked for humans, not just linters.",
+      "Configured VPS infrastructure and optimized hosting costs without letting the server bill grow.",
+      "Installed and maintained LXC/Docker containers for user node hosting by keeping environments isolated, automated, repeatable.",
+      "Built automation flows for node installs, updates, monitoring, and metrics visualization so infrastructure behaved more like a system."
     ],
     skills: [
-      SkillNames.REACT,
-      SkillNames.FIREBASE,
-      SkillNames.TAILWIND,
-      SkillNames.HTML,
-      SkillNames.CSS,
+      SkillNames.PYTHON,
+      SkillNames.LINUX,
+      SkillNames.DOCKER,
+      SkillNames.ANSIBLE,
+      SkillNames.GRAFANA,
+      SkillNames.BASH
     ],
   },
   {
     id: 4,
-    startDate: "Jun 2022",
-    endDate: "Aug 2022",
-    title: "Jr. ReactJS Developer",
-    company: "Intellisnc",
+    startDate: "12/2022",
+    endDate: "06/2023",
+    title: "AQA, Automation",
+    company: "Sotor, Product, Deftech",
     description: [
-      "Jumped in with React, shipping sprint-sized web apps before learning where the coffee machine was.",
-      "Obsessed over semantic HTML, responsive grids, and cross-browser quirks so things didn’t break on demo day.",
+      "Data serialization, validation and processing.",
+      "Supported internal engineering workflows, made repetitive checks concurrently faster and more reliable."
     ],
     skills: [
-      SkillNames.REACT,
-      SkillNames.HTML,
-      SkillNames.CSS,
-      SkillNames.TAILWIND,
-      SkillNames.GIT,
+      SkillNames.PYTHON,
+      SkillNames.LINUX,
+      SkillNames.ASYNCIO,
+      SkillNames.SELENIUM,
+      SkillNames.OSI,
+      SkillNames.MONGODB
+    ],
+  },
+  {
+    id: 5,
+    startDate: "01/2022",
+    endDate: "10/2022",
+    title: "AQA, Automation",
+    company: "GlobalLogic, Hitachi Group, Android Devices Management",
+    description: [
+      "Maintained plugins, E2E autotests for different Android smartphones and apps.",
+      "Designed and automated test cases for internal web framework.",
+    ],
+    skills: [
+      SkillNames.PYTHON,
+      SkillNames.LINUX,
+      SkillNames.PYTEST,
+      SkillNames.KOTLIN,
+      SkillNames.APPIUM,
+      SkillNames.GITHUB,
+    ],
+  },
+  {
+    id: 6,
+    startDate: "01/2021",
+    endDate: "12/2021",
+    title: "Python Developer",
+    company: "UA client, Freelance, E-commerce",
+    description: [
+      "Backend design and implementation for a Flask-based web app.",
+      "Server-side functionality, user auth support, and integration with externals.",
+    ],
+    skills: [
+      SkillNames.PYTHON,
+      SkillNames.FLASK,
+      SkillNames.LINUX,
+      SkillNames.MONGODB,
+      SkillNames.POSTGRESQL,
+      SkillNames.NGINX
+    ],
+  },
+  {
+    id: 7,
+    startDate: "09/2019",
+    endDate: "09/2020",
+    title: "QA / AQA",
+    company: "CrowdRobot, Start-Up, E-commerce Chatbots",
+    description: [
+      "Owned the full TDLC process for e-commerce chatbot products, from requirement analysis to test execution and reporting.",
+      "Cooperated with the team to improve product quality and catch bugs.",
+      "Worked on user requirements within team budget and deadlines."
+    ],
+    skills: [
+      SkillNames.PYTHON,
+      SkillNames.POSTMAN,
+      SkillNames.PYTEST,
     ],
   },
 ];
